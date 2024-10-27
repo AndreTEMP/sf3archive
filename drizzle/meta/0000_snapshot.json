@@ -1,0 +1,189 @@
+{
+  "id": "220b48e1-2115-440f-a029-49533a31a5f0",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.sf3archive_matches": {
+      "name": "sf3archive_matches",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "video": {
+          "name": "video",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "time_stamped_hours": {
+          "name": "time_stamped_hours",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "time_stamped_minutes": {
+          "name": "time_stamped_minutes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "time_stamped_seconds": {
+          "name": "time_stamped_seconds",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "starting_seconds": {
+          "name": "starting_seconds",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "hyperlink_seconds": {
+          "name": "hyperlink_seconds",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "player_one_name": {
+          "name": "player_one_name",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "player_one_char": {
+          "name": "player_one_char",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "player_one_s_a": {
+          "name": "player_one_s_a",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "player_one_win_loss": {
+          "name": "player_one_win_loss",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "player_two_name": {
+          "name": "player_two_name",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "player_two_char": {
+          "name": "player_two_char",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "player_two_s_a": {
+          "name": "player_two_s_a",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "player_two_win_loss": {
+          "name": "player_two_win_loss",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "player_one_perfect": {
+          "name": "player_one_perfect",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "player_two_perfect": {
+          "name": "player_two_perfect",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "mirror": {
+          "name": "mirror",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "event": {
+          "name": "event",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "type": {
+          "name": "type",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "date": {
+          "name": "date",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "location": {
+          "name": "location",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "breakdown": {
+          "name": "breakdown",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "version": {
+          "name": "version",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "yt_description": {
+          "name": "yt_description",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "CURRENT_TIMESTAMP"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

@@ -1,4 +1,5 @@
 import "~/styles/globals.css";
+import Link from "next/link";
 
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
@@ -12,11 +13,24 @@ export const metadata: Metadata = {
 function TopNav() {
   return (
     <nav className="flex w-full items-center justify-around border-b p-4 text-xl font-semibold">
-      <div>Players</div>
-      <div>Characters</div>
-      <div>Venues</div>
-      <div>Events</div>
-      <div>Miscellaneous</div>
+      <div>
+        <Link href="/">Home</Link>
+      </div>
+      <div>
+        <Link href="/players">Players</Link>
+      </div>
+      <div>
+        <Link href="/characters">Characters</Link>
+      </div>
+      <div>
+        <Link href="/venues">Venues</Link>
+      </div>
+      <div>
+        <Link href="/events">Events</Link>
+      </div>
+      <div>
+        <Link href="/miscellaneous">Miscellaneous</Link>
+      </div>
     </nav>
   );
 }
