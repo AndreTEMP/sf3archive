@@ -20,7 +20,7 @@ import {
  */
 export const createTable = pgTableCreator((name) => `sf3archive_${name}`);
 
-export const matchs = createTable(
+export const matches = createTable(
   "matches",
   {
     id: serial("id").primaryKey(),
@@ -49,6 +49,96 @@ export const matchs = createTable(
     version: varchar("version", { length: 256 }),
     ytDescription: varchar("yt_description", { length: 256 }),
 
+    createdAt: timestamp("created_at", { withTimezone: true })
+      .default(sql`CURRENT_TIMESTAMP`)
+      .notNull(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).$onUpdate(
+      () => new Date()
+    ),
+  },
+);
+
+export const players = createTable(
+  "characters",
+  {
+    id: serial("id").primaryKey(),
+    location: varchar("location", { length: 256 }),
+    image: varchar("image", { length: 256 }),
+    createdAt: timestamp("created_at", { withTimezone: true })
+      .default(sql`CURRENT_TIMESTAMP`)
+      .notNull(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).$onUpdate(
+      () => new Date()
+    ),
+  },
+);
+
+export const events = createTable(
+  "events",
+  {
+    id: serial("id").primaryKey(),
+    location: varchar("location", { length: 256 }),
+    image: varchar("image", { length: 256 }),
+    createdAt: timestamp("created_at", { withTimezone: true })
+      .default(sql`CURRENT_TIMESTAMP`)
+      .notNull(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).$onUpdate(
+      () => new Date()
+    ),
+  },
+);
+
+export const venues = createTable(
+  "venues",
+  {
+    id: serial("id").primaryKey(),
+    location: varchar("location", { length: 256 }),
+    image: varchar("image", { length: 256 }),
+    createdAt: timestamp("created_at", { withTimezone: true })
+      .default(sql`CURRENT_TIMESTAMP`)
+      .notNull(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).$onUpdate(
+      () => new Date()
+    ),
+  },
+);
+
+export const matchesPlayers = createTable(
+  "matchesPlayers",
+  {
+    id: serial("id").primaryKey(),
+    matchesId: integer("matches_id"),
+    playersId: integer("players_id"),
+    createdAt: timestamp("created_at", { withTimezone: true })
+      .default(sql`CURRENT_TIMESTAMP`)
+      .notNull(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).$onUpdate(
+      () => new Date()
+    ),
+  },
+);
+
+export const matchesEvents = createTable(
+  "matchesEvents",
+  {
+    id: serial("id").primaryKey(),
+    matchesId: integer("matches_id"),
+    eventsId: integer("events_id"),
+    createdAt: timestamp("created_at", { withTimezone: true })
+      .default(sql`CURRENT_TIMESTAMP`)
+      .notNull(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).$onUpdate(
+      () => new Date()
+    ),
+  },
+);
+
+export const matchesVenues = createTable(
+  "matchesVenues",
+  {
+    id: serial("id").primaryKey(),
+    matchesId: integer("matches_id"),
+    venuesId: integer("venues_id"),
     createdAt: timestamp("created_at", { withTimezone: true })
       .default(sql`CURRENT_TIMESTAMP`)
       .notNull(),

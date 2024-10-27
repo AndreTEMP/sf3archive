@@ -17,6 +17,9 @@ function TopNav() {
         <Link href="/">Home</Link>
       </div>
       <div>
+        <Link href="/matches">Matches</Link>
+      </div>
+      <div>
         <Link href="/players">Players</Link>
       </div>
       <div>
