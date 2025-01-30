@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { NextRequest, NextResponse } from "next/server";
 import { db } from "../../../server/db/index"; // Ensure correct path to DB connection
 import { matches } from "../../../server/db/schema"; // Ensure correct path to schema

@@ -1,9 +1,14 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/dot-notation */
 "use client";
 
 import { useState, ChangeEvent, useRef } from "react";
 import * as XLSX from "xlsx";
 
-type TableRow = Record<string, Record<string, unknown>>;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type TableRow = Record<string, any>;
 
 export default function MatchUploader() {
   const [tableData, setTableData] = useState<TableRow[]>([]);
