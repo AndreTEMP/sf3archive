@@ -40,7 +40,7 @@ export const matches = createTable(
     playerTwoSA: varchar("player_two_s_a", { length: 256 }),
     playerTwoWinLoss: boolean("player_two_win_loss"),
     playerTwoPerfect: boolean("player_two_perfect"),
-    mirror: integer("mirror"),
+    mirror: varchar("mirror"),
     event: varchar("event", { length: 256 }),
     type: varchar("type", { length: 256 }),
     date: integer("date"),

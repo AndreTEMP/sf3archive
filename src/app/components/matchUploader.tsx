@@ -40,8 +40,6 @@ export default function MatchUploader() {
               return;
             }
 
-            console.log(jsonData);
-
             // Time on HH:MM:SS is in decimal right now. Decimal is representing the percent of a day.
             // Conversion is multiply by 24 to get the hours, for the remainder multiply by 60 to get the minutes
             // for the remainder multiply by 60 to get the seconds.
@@ -121,6 +119,8 @@ export default function MatchUploader() {
               delete row["Version"];
               delete row["YT description"];
             });
+
+            console.log(jsonData);
 
             if (jsonData.length > 0) {
               setHeaders(Object.keys(jsonData[0]));
